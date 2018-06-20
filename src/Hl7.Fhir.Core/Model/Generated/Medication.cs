@@ -5,6 +5,7 @@ using Hl7.Fhir.Validation;
 using System.Linq;
 using System.Runtime.Serialization;
 using Hl7.Fhir.Utility;
+using System.ComponentModel.DataAnnotations.Schema;
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -49,16 +50,16 @@ namespace Hl7.Fhir.Model
     [DataContract]
     public partial class Medication : Hl7.Fhir.Model.DomainResource, System.ComponentModel.INotifyPropertyChanged
     {
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override ResourceType ResourceType { get { return ResourceType.Medication; } }
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override string TypeName { get { return "Medication"; } }
         
         [FhirType("ProductComponent")]
         [DataContract]
         public partial class ProductComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "ProductComponent"; } }
             
             /// <summary>
@@ -150,7 +151,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -162,7 +163,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -182,7 +183,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class IngredientComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "IngredientComponent"; } }
             
             /// <summary>
@@ -259,7 +260,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -270,7 +271,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -289,7 +290,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class BatchComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "BatchComponent"; } }
             
             /// <summary>
@@ -309,7 +310,7 @@ namespace Hl7.Fhir.Model
             /// 
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string LotNumber
             {
@@ -341,7 +342,7 @@ namespace Hl7.Fhir.Model
             /// 
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string ExpirationDate
             {
@@ -401,7 +402,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -412,7 +413,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -431,7 +432,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class PackageComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "PackageComponent"; } }
             
             /// <summary>
@@ -506,7 +507,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -517,7 +518,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -536,7 +537,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class ContentComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "ContentComponent"; } }
             
             /// <summary>
@@ -613,7 +614,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -624,7 +625,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -669,7 +670,7 @@ namespace Hl7.Fhir.Model
         /// True if a brand
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public bool? IsBrand
         {
@@ -785,7 +786,7 @@ namespace Hl7.Fhir.Model
             return true;
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override IEnumerable<Base> Children
         {
             get
@@ -799,7 +800,7 @@ namespace Hl7.Fhir.Model
             }
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         internal override IEnumerable<ElementValue> NamedChildren
         {
             get

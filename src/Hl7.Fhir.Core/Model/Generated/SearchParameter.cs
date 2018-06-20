@@ -5,6 +5,7 @@ using Hl7.Fhir.Validation;
 using System.Linq;
 using System.Runtime.Serialization;
 using Hl7.Fhir.Utility;
+using System.ComponentModel.DataAnnotations.Schema;
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -49,9 +50,9 @@ namespace Hl7.Fhir.Model
     [DataContract]
     public partial class SearchParameter : Hl7.Fhir.Model.DomainResource, System.ComponentModel.INotifyPropertyChanged
     {
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override ResourceType ResourceType { get { return ResourceType.SearchParameter; } }
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override string TypeName { get { return "SearchParameter"; } }
         
         /// <summary>
@@ -97,7 +98,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class ContactComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "ContactComponent"; } }
             
             /// <summary>
@@ -117,7 +118,7 @@ namespace Hl7.Fhir.Model
             /// Name of a individual to contact
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string Name
             {
@@ -191,7 +192,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -202,7 +203,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -235,7 +236,7 @@ namespace Hl7.Fhir.Model
         /// Absolute URL used to reference this search parameter
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Url
         {
@@ -268,7 +269,7 @@ namespace Hl7.Fhir.Model
         /// Informal name for this search parameter
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Name
         {
@@ -300,7 +301,7 @@ namespace Hl7.Fhir.Model
         /// draft | active | retired
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.ConformanceResourceStatus? Status
         {
@@ -332,7 +333,7 @@ namespace Hl7.Fhir.Model
         /// If for testing purposes, not real usage
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public bool? Experimental
         {
@@ -364,7 +365,7 @@ namespace Hl7.Fhir.Model
         /// Name of the publisher (Organization or individual)
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Publisher
         {
@@ -410,7 +411,7 @@ namespace Hl7.Fhir.Model
         /// Publication Date(/time)
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Date
         {
@@ -442,7 +443,7 @@ namespace Hl7.Fhir.Model
         /// Why this search parameter is defined
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Requirements
         {
@@ -475,7 +476,7 @@ namespace Hl7.Fhir.Model
         /// Code used in URL
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Code
         {
@@ -508,7 +509,7 @@ namespace Hl7.Fhir.Model
         /// The resource type this search parameter applies to
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.ResourceType? Base
         {
@@ -541,7 +542,7 @@ namespace Hl7.Fhir.Model
         /// number | date | string | token | reference | composite | quantity | uri
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.SearchParamType? Type
         {
@@ -574,7 +575,7 @@ namespace Hl7.Fhir.Model
         /// Documentation for  search parameter
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Description
         {
@@ -606,7 +607,7 @@ namespace Hl7.Fhir.Model
         /// XPath that extracts the values
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Xpath
         {
@@ -638,7 +639,7 @@ namespace Hl7.Fhir.Model
         /// normal | phonetic | nearby | distance | other
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.SearchParameter.XPathUsageType? XpathUsage
         {
@@ -671,7 +672,7 @@ namespace Hl7.Fhir.Model
         /// Types of resource (if a resource reference)
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public IEnumerable<Hl7.Fhir.Model.ResourceType?> Target
         {
@@ -786,7 +787,7 @@ namespace Hl7.Fhir.Model
             return true;
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override IEnumerable<Base> Children
         {
             get
@@ -810,7 +811,7 @@ namespace Hl7.Fhir.Model
             }
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         internal override IEnumerable<ElementValue> NamedChildren
         {
             get

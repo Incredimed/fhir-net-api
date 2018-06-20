@@ -5,6 +5,7 @@ using Hl7.Fhir.Validation;
 using System.Linq;
 using System.Runtime.Serialization;
 using Hl7.Fhir.Utility;
+using System.ComponentModel.DataAnnotations.Schema;
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -49,9 +50,9 @@ namespace Hl7.Fhir.Model
     [DataContract]
     public partial class Claim : Hl7.Fhir.Model.DomainResource, System.ComponentModel.INotifyPropertyChanged
     {
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override ResourceType ResourceType { get { return ResourceType.Claim; } }
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override string TypeName { get { return "Claim"; } }
         
         /// <summary>
@@ -130,7 +131,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class PayeeComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "PayeeComponent"; } }
             
             /// <summary>
@@ -242,7 +243,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -255,7 +256,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -276,7 +277,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class DiagnosisComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "DiagnosisComponent"; } }
             
             /// <summary>
@@ -297,7 +298,7 @@ namespace Hl7.Fhir.Model
             /// Sequence of diagnosis
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public int? Sequence
             {
@@ -371,7 +372,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -382,7 +383,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -401,7 +402,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class CoverageComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "CoverageComponent"; } }
             
             /// <summary>
@@ -422,7 +423,7 @@ namespace Hl7.Fhir.Model
             /// Service instance identifier
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public int? Sequence
             {
@@ -455,7 +456,7 @@ namespace Hl7.Fhir.Model
             /// The focal Coverage
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public bool? Focal
             {
@@ -503,7 +504,7 @@ namespace Hl7.Fhir.Model
             /// Business agreement
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string BusinessArrangement
             {
@@ -550,7 +551,7 @@ namespace Hl7.Fhir.Model
             /// Pre-Authorization/Determination Reference
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public IEnumerable<string> PreAuthRef
             {
@@ -656,7 +657,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -673,7 +674,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -698,7 +699,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class ItemsComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "ItemsComponent"; } }
             
             /// <summary>
@@ -719,7 +720,7 @@ namespace Hl7.Fhir.Model
             /// Service instance
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public int? Sequence
             {
@@ -781,7 +782,7 @@ namespace Hl7.Fhir.Model
             /// Diagnosis Link
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public IEnumerable<int?> DiagnosisLinkId
             {
@@ -827,7 +828,7 @@ namespace Hl7.Fhir.Model
             /// Date of Service
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string ServiceDate
             {
@@ -885,7 +886,7 @@ namespace Hl7.Fhir.Model
             /// Price scaling factor
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public decimal? Factor
             {
@@ -917,7 +918,7 @@ namespace Hl7.Fhir.Model
             /// Difficulty scaling factor
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public decimal? Points
             {
@@ -1116,7 +1117,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -1142,7 +1143,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -1176,7 +1177,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class DetailComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "DetailComponent"; } }
             
             /// <summary>
@@ -1197,7 +1198,7 @@ namespace Hl7.Fhir.Model
             /// Service instance
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public int? Sequence
             {
@@ -1283,7 +1284,7 @@ namespace Hl7.Fhir.Model
             /// Price scaling factor
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public decimal? Factor
             {
@@ -1315,7 +1316,7 @@ namespace Hl7.Fhir.Model
             /// Difficulty scaling factor
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public decimal? Points
             {
@@ -1439,7 +1440,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -1458,7 +1459,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -1485,7 +1486,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class SubDetailComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "SubDetailComponent"; } }
             
             /// <summary>
@@ -1506,7 +1507,7 @@ namespace Hl7.Fhir.Model
             /// Service instance
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public int? Sequence
             {
@@ -1592,7 +1593,7 @@ namespace Hl7.Fhir.Model
             /// Price scaling factor
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public decimal? Factor
             {
@@ -1624,7 +1625,7 @@ namespace Hl7.Fhir.Model
             /// Difficulty scaling factor
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public decimal? Points
             {
@@ -1731,7 +1732,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -1749,7 +1750,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -1775,7 +1776,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class ProsthesisComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "ProsthesisComponent"; } }
             
             /// <summary>
@@ -1795,7 +1796,7 @@ namespace Hl7.Fhir.Model
             /// Is this the initial service
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public bool? Initial
             {
@@ -1827,7 +1828,7 @@ namespace Hl7.Fhir.Model
             /// Initial service Date
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string PriorDate
             {
@@ -1903,7 +1904,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -1915,7 +1916,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -1935,7 +1936,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class MissingTeethComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "MissingTeethComponent"; } }
             
             /// <summary>
@@ -1982,7 +1983,7 @@ namespace Hl7.Fhir.Model
             /// Date of Extraction
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string ExtractionDate
             {
@@ -2045,7 +2046,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -2057,7 +2058,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -2091,7 +2092,7 @@ namespace Hl7.Fhir.Model
         /// institutional | oral | pharmacy | professional | vision
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.Claim.ClaimType? Type
         {
@@ -2163,7 +2164,7 @@ namespace Hl7.Fhir.Model
         /// Creation date
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Created
         {
@@ -2240,7 +2241,7 @@ namespace Hl7.Fhir.Model
         /// complete | proposed | exploratory | other
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.Claim.Use? Use_
         {
@@ -2458,7 +2459,7 @@ namespace Hl7.Fhir.Model
         /// Name of School
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string School
         {
@@ -2490,7 +2491,7 @@ namespace Hl7.Fhir.Model
         /// Accident Date
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Accident
         {
@@ -2706,7 +2707,7 @@ namespace Hl7.Fhir.Model
             return true;
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override IEnumerable<Base> Children
         {
             get
@@ -2744,7 +2745,7 @@ namespace Hl7.Fhir.Model
             }
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         internal override IEnumerable<ElementValue> NamedChildren
         {
             get

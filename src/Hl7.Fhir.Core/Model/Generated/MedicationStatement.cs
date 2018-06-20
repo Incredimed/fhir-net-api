@@ -5,6 +5,7 @@ using Hl7.Fhir.Validation;
 using System.Linq;
 using System.Runtime.Serialization;
 using Hl7.Fhir.Utility;
+using System.ComponentModel.DataAnnotations.Schema;
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -49,9 +50,9 @@ namespace Hl7.Fhir.Model
     [DataContract]
     public partial class MedicationStatement : Hl7.Fhir.Model.DomainResource, System.ComponentModel.INotifyPropertyChanged
     {
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override ResourceType ResourceType { get { return ResourceType.MedicationStatement; } }
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override string TypeName { get { return "MedicationStatement"; } }
         
         /// <summary>
@@ -91,7 +92,7 @@ namespace Hl7.Fhir.Model
         [DataContract]
         public partial class DosageComponent : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "DosageComponent"; } }
             
             /// <summary>
@@ -111,7 +112,7 @@ namespace Hl7.Fhir.Model
             /// Reported dosage information
             /// </summary>
             /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public string Text
             {
@@ -304,7 +305,7 @@ namespace Hl7.Fhir.Model
             }
 
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -322,7 +323,7 @@ namespace Hl7.Fhir.Model
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -406,7 +407,7 @@ namespace Hl7.Fhir.Model
         /// When the statement was asserted?
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string DateAsserted
         {
@@ -439,7 +440,7 @@ namespace Hl7.Fhir.Model
         /// active | completed | entered-in-error | intended
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public Hl7.Fhir.Model.MedicationStatement.MedicationStatementStatus? Status
         {
@@ -471,7 +472,7 @@ namespace Hl7.Fhir.Model
         /// True if medication is/was not being taken
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public bool? WasNotTaken
         {
@@ -547,7 +548,7 @@ namespace Hl7.Fhir.Model
         /// Further information about the statement
         /// </summary>
         /// <remarks>This uses the native .NET datatype, rather than the FHIR equivalent</remarks>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public string Note
         {
@@ -712,7 +713,7 @@ namespace Hl7.Fhir.Model
             return true;
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override IEnumerable<Base> Children
         {
             get
@@ -734,7 +735,7 @@ namespace Hl7.Fhir.Model
             }
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         internal override IEnumerable<ElementValue> NamedChildren
         {
             get

@@ -121,6 +121,7 @@ using Hl7.Fhir.Validation;
 using System.Linq;
 using System.Runtime.Serialization;
 using Hl7.Fhir.Utility;
+using System.ComponentModel.DataAnnotations.Schema;
 
 /*
   Copyright (c) 2011+, HL7, Inc.
@@ -168,9 +169,9 @@ if(!abstractType) {
 #>    [DataContract]
     public<#= abstractType ? " abstract" : "" #> partial class <#= resourceName #> : <#= resourceBaseType #>, System.ComponentModel.INotifyPropertyChanged
     {
-<# if (resourceBaseType != "Hl7.Fhir.Model.Element") { #>        [NotMapped]
+<# if (resourceBaseType != "Hl7.Fhir.Model.Element") { #>        [Hl7.Fhir.Introspection.NotMapped]
         public override ResourceType ResourceType { get { return ResourceType.<#= resourceName #>; } }
-<# } #>        [NotMapped]
+<# } #>        [Hl7.Fhir.Introspection.NotMapped]
         public override string TypeName { get { return "<#= resourceName #>"; } }
         
 <#
@@ -298,7 +299,7 @@ if(!abstractType) {
         [DataContract]
         public partial class <#= componentName #> : Hl7.Fhir.Model.BackboneElement, System.ComponentModel.INotifyPropertyChanged
         {
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override string TypeName { get { return "<#= componentName #>"; } }
             
 <#
@@ -346,7 +347,7 @@ if(!abstractType) {
 <# if (false && pd.CardMax != "1") {#>        [Cardinality(Min=<#= pd.CardMin #>,Max=<#= pd.CardMax.Replace("*", "-1") #>)] 
 <# }
 #>
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             [IgnoreDataMemberAttribute]
             public <#= pd.IsMultiCard() ? "IEnumerable<" + pd.NativeType + ">" : pd.NativeType #> <#= pd.NativeName #>
             {
@@ -434,7 +435,7 @@ if(!abstractType) {
 		    // [WMR 20160818] START - implement generic properties collection
 #>
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             public override IEnumerable<Base> Children
             {
                 get
@@ -446,7 +447,7 @@ if(!abstractType) {
                 }
             }
 
-            [NotMapped]
+            [Hl7.Fhir.Introspection.NotMapped]
             internal override IEnumerable<ElementValue> NamedChildren
             {
                 get
@@ -518,7 +519,7 @@ if(!abstractType) {
 <# if (false && pd.CardMax != "1") {#>        [Cardinality(Min=<#= pd.CardMin #>,Max=<#= pd.CardMax.Replace("*", "-1") #>)] 
 <# }
 #>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         [IgnoreDataMemberAttribute]
         public <#= pd.IsMultiCard() ? "IEnumerable<" + pd.NativeType + ">" : pd.NativeType #> <#= pd.NativeName #>
         {
@@ -656,7 +657,7 @@ if(!abstractType) {
 <#
 		// [WMR 20160818] START - implement generic properties collection
 #>
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         public override IEnumerable<Base> Children
         {
             get
@@ -668,7 +669,7 @@ if(!abstractType) {
             }
         }
 
-        [NotMapped]
+        [Hl7.Fhir.Introspection.NotMapped]
         internal override IEnumerable<ElementValue> NamedChildren
         {
             get

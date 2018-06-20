@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
     <Compile Remove="Properties\Resources.Designer.cs" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <Compile Remove="Properties\Resources.Designer.cs" />
@@ -86,6 +87,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Template-Model.tt</DependentUpon>
     </Compile>
+    <Compile Update="Model\GeneratedEntityFramework\Template-Model-EntityFramework.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Template-Model-EntityFramework.tt</DependentUpon>
+    </Compile>
     <Compile Update="Model\Generated\Template-ModelInfo.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -98,9 +104,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Update="Model\GeneratedEntityFramework\Template-Model-Components-EntityFramework.ttinclude">
+      <Generator>
+      </Generator>
+    </None>
     <None Update="Model\Generated\Template-Bindings.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Template-Bindings.cs</LastGenOutput>
+    </None>
+    <None Update="Model\GeneratedEntityFramework\Template-Children-EntityFramework.ttinclude">
+      <Generator>
+      </Generator>
     </None>
     <None Update="Model\Generated\Template-Children.ttinclude">
       <Generator>
@@ -109,6 +123,10 @@
     <None Update="Model\Generated\Template-DataTypeModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Template-DataTypeModel.cs</LastGenOutput>
+    </None>
+    <None Update="Model\GeneratedEntityFramework\Template-Model-EntityFramework.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Template-Model-EntityFramework.cs</LastGenOutput>
     </None>
     <None Update="Model\Generated\Template-Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
